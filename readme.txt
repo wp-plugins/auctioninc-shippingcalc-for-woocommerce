@@ -44,7 +44,7 @@ This plugin requires the WooCommerce e-commerce plugin.
 
 Guide to Plug-In Module Installation
 
-1. Upload the folder 'woocommerce-shipping-auctioninc' to the '/wp-content/plugins/' directory
+1. Upload the folder 'auctioninc-shippingcalc-for-woocommerce' to the '/wp-content/plugins/' directory
 2. Activate the plugin through the 'Plugins' menu in WordPress
 3. Under Woocommerce -> Settings -> Shipping, find the AuctionInc section and fill out the required fields. You will need an AuctionInc WooCommerce Plug-In account.
 
