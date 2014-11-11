@@ -42,7 +42,7 @@ This plugin requires the WooCommerce e-commerce plugin.
 
 == Installation ==
 
-Guide to Plug-In Module Installion
+Guide to Plug-In Module Installation
 
 1. Upload the folder 'woocommerce-shipping-auctioninc' to the '/wp-content/plugins/' directory
 2. Activate the plugin through the 'Plugins' menu in WordPress
@@ -53,14 +53,12 @@ Guide to Plug-In Module Installion
 
 = Do I need an AuctionInc account to use this module? =
 
- Yes. To sign up, go to: https://www.auctioninc.com/info/page/woocommerce_api_module =
+Yes. To sign up, please go [here](https://www.auctioninc.com/info/page/woocommerce_api_module).
  
-= Please see our website HelpDesk at http://auctioninc.helpserve.com for more FAQs. =
+= Please see our website [HelpDesk](http://auctioninc.helpserve.com) for more FAQs. =
 
 
 == Screenshots ==
-
-* Please see our Module Description page at https://www.auctioninc.com/info/page/woocommerce_api_module
 
 
 == Changelog ==
