@@ -55,8 +55,7 @@ Guide to Plug-In Module Installation
 
 Yes. To sign up, please go [here](https://www.auctioninc.com/info/page/woocommerce_api_module).
  
-= Please see our website [HelpDesk](http://auctioninc.helpserve.com) for more FAQs. =
-
+Please see our website [HelpDesk](http://auctioninc.helpserve.com) for more FAQs.
 
 == Screenshots ==
 
