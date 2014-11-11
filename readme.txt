@@ -18,24 +18,24 @@ Accurate Multi-Carrier Real-time Shipping Rates for the WooCommerce Cart
 
 Our ShippingCalc Plug-In for WooCommerce instantly provides you access to our Shipping Rates API and allows you to integrate rates from multiple carriers (DHL, FedEx, USPS, UPS) into your store. There are many advanced features in our WooCommerce Shipping Plug-In; such as drop-shipping from multiple origins,USPS flat rate box calculations, insurance,flexiible handling, packaging material weight, and many more features. Our technology is especially unique in its capability to accurately generate rates for items/quantities that must be packed into multiple boxes. 
 
-    *Intelligent packaging for multiple items and quantities
-    *Domestic and international services supported from any origin 
-    *Carrier accounts not required
-    *Advanced capabilities for determining fit into USPS flat rate boxes
-    *Debug Mode 
-    *Separate configuration for packing materials weight
-    *Automatically determines dimensional weight pricing
-    *Supports both flat rate and carrier-calculated rates
-    *Configure handling per item, package, or order 
-    *Charge handling by flat fee or percentage
-    *Determine insurance cost based on value
-    *Supports items limited to particular services
-    *Discounts or free shipping based on the order price
-    *Supports shipping from multiple locations by item
-    *All accessorial carrier charges supported 
-    *Offer pickup or delivery based on zip code range 
+* Intelligent packaging for multiple items and quantities
+* Domestic and international services supported from any origin 
+* Carrier accounts not required
+* Advanced capabilities for determining fit into USPS flat rate boxes
+* Debug Mode 
+* Separate configuration for packing materials weight
+* Automatically determines dimensional weight pricing
+* Supports both flat rate and carrier-calculated rates
+* Configure handling per item, package, or order 
+* Charge handling by flat fee or percentage
+* Determine insurance cost based on value
+* Supports items limited to particular services
+* Discounts or free shipping based on the order price
+* Supports shipping from multiple locations by item
+* All accessorial carrier charges supported 
+* Offer pickup or delivery based on zip code range 
 
-There are many available plug-ins to help merchants ship their orders, but none with the capabilities we offer with our WooCommerce ShippingCalc Plug-In,powered by AuctionInc’s patented shipping rate engine. "Take the guess out of shipping”, so the shipping prices quoted to your customers are accurate based on your unique business needs.
+There are many available plug-ins to help merchants ship their orders, but none with the capabilities we offer with our WooCommerce ShippingCalc Plug-In,powered by AuctionInc's patented shipping rate engine. "Take the guess out of shipping", so the shipping prices quoted to your customers are accurate based on your unique business needs.
 
 This plugin requires the WooCommerce e-commerce plugin.
 
