@@ -1,7 +1,7 @@
 === AuctionInc ShippingCalc for WooCommerce ===
 
 Contributors: AuctionInc,45press
-Tags: shipping,shipping rates,shipping calculator,carriers,usps,fedex,ups,dhl,woocommerce,woocommerce shipping,wc shipping,advanced shipping, multiple origins
+Tags: shipping,shipping rates,shipping calculator,shipping estimate,estimator,carriers,USPS,FEDEX,UPS,DHL,woocommerce,woocommerce shipping,wc shipping,advanced shipping, multiple origins
 Requires at least: 3.0
 Tested up to: 4.0
 Stable tag: 1.4
@@ -14,7 +14,7 @@ Accurate multi-carrier real-time Shipping Rates from FedEx, USPS, UPS, and DHL. 
 
 **Accurate Multi-Carrier Real-time Shipping Rates for the WooCommerce Cart**
 
-Subscription to [AuctionInc](https://www.auctioninc.com/info/page/woocommerce_api_module) required  
+Subscription to [AuctionInc](https://www.auctioninc.com/info/page/woocommerce_api_module) required.  
 
 Our ShippingCalc Plug-In for WooCommerce instantly provides you access to our Shipping Rates API and allows you to integrate rates from multiple carriers (DHL, FedEx, USPS, UPS) into your store. There are many advanced features in our WooCommerce Shipping Plug-In; such as drop-shipping from multiple origins,USPS flat rate box calculations, insurance,flexiible handling, packaging material weight, and many more features. Our technology is especially unique in its capability to accurately generate rates for items/quantities that must be packed into multiple boxes. 
 
@@ -60,7 +60,9 @@ Yes. To register, please go [here](https://www.auctioninc.com/info/page/woocomme
 Please see our website [HelpDesk](http://auctioninc.helpserve.com) for more FAQs.
 
 == Screenshots ==
-
+1. Default plug-in configuration settings
+2. Product-level plug-in configuration settings
+3. Example of carrier configuration setting in your AuctionInc account
 
 == Changelog ==
 
