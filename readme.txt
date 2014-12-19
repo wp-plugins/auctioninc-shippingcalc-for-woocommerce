@@ -1,13 +1,13 @@
-=== AuctionInc ShippingCalc for WooCommerce ===
+=== Multi-Carrier Shipping Calculator for WooCommerce ===
 
 Contributors: AuctionInc,45press
 Tags: shipping,shipping rates,shipping calculator,shipping estimate,estimator,carriers,USPS,FEDEX,UPS,DHL,woocommerce,woocommerce shipping,wc shipping,advanced shipping, multiple origins
 Requires at least: 3.0
-Tested up to: 4.0
+Tested up to: 4.1
 Stable tag: 1.4
 License: License: GNU General Public License v3.0
 
-Accurate multi-carrier real-time Shipping Rates from FedEx, USPS, UPS, and DHL. Supports multiple ship origins, many advanced features. 
+Accurate multi-carrier real-time shipping rates from FedEx, USPS, UPS, and DHL. Multiple ship origins, many advanced features. Free two week trial. 
 
 
 == Description ==
@@ -16,7 +16,7 @@ Accurate multi-carrier real-time Shipping Rates from FedEx, USPS, UPS, and DHL. 
 
 Subscription to [AuctionInc](https://www.auctioninc.com/info/page/woocommerce_api_module) required.  
 
-Our ShippingCalc Plug-In for WooCommerce instantly provides you access to our Shipping Rates API and allows you to integrate rates from multiple carriers (DHL, FedEx, USPS, UPS) into your store. There are many advanced features in our WooCommerce Shipping Plug-In; such as drop-shipping from multiple origins,USPS flat rate box calculations, insurance,flexiible handling, packaging material weight, and many more features. Our technology is especially unique in its capability to accurately generate rates for items/quantities that must be packed into multiple boxes. 
+Our ShippingCalc Plug-In for WooCommerce instantly provides you access to our Shipping Rates API and allows you to integrate rates from multiple carriers (DHL, FedEx, USPS, UPS) into your store. There are many advanced features in our WooCommerce Shipping Plug-In; such as drop-shipping from multiple origins, USPS flat rate box calculations, insurance,flexiible handling, packaging material weight, and more. Our technology is especially unique in its capability to accurately generate rates for items/quantities that must be packed into multiple boxes. 
 
 **Features Include:**
 
