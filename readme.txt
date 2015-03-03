@@ -4,7 +4,7 @@ Contributors: AuctionInc,45press
 Tags: shipping,shipping rates,shipping calculator,shipping estimate,estimator,carriers,USPS,FEDEX,UPS,DHL,woocommerce,woocommerce shipping,wc shipping,advanced shipping, multiple origins
 Requires at least: 3.0
 Tested up to: 4.1
-Stable tag: 1.4
+Stable tag: 1.5
 License: License: GNU General Public License v3.0
 
 Accurate multi-carrier real-time shipping rates from FedEx, USPS, UPS, and DHL. Multiple ship origins, many advanced features. Free two week trial. 
