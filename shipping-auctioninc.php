@@ -3,7 +3,7 @@
   Plugin Name: AuctionInc ShippingCalc for WooCommerce
   Plugin URI: http://www.auctioninc.com/info/page/woocommerce_api_module
   Description: Obtain shipping rates dynamically via the AuctionInc Shipping API for your orders.
-  Version: 1.4
+  Version: 1.5
   Author: Paid, Inc.
   Author URI: http://www.auctioninc.com
 

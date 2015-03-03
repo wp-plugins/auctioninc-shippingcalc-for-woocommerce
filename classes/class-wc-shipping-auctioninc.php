@@ -444,7 +444,7 @@ class WC_Shipping_AuctionInc extends WC_Shipping_Method {
                     // New API call
                     $ok = $shipAPI->GetItemShipRateSS($shipRates);
                     if ($ok) {
-                        set_transient($transient, serialize($shipRates));
+                        set_transient($transient, serialize($shipRates), 30 * MINUTE_IN_SECONDS);
                     }
                 }
 

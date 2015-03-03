@@ -66,6 +66,9 @@ Please see our website [HelpDesk](http://auctioninc.helpserve.com) for more FAQs
 
 == Changelog ==
 
+= version 1.5 [03-2-15] =
+* fix for transient expiration
+
 = version 1.4 [11-6-14] =
 * minor fixes for some STRICT warnings from the latest php version
 
