@@ -43,23 +43,30 @@ This plugin requires the WooCommerce e-commerce plugin as well as a subscription
 
 == Installation ==
 
-= Guide to ShippingCalc Plugin Installation & Setup =
-
-
 **1. Install Plugin**
+
 *Automatic*: In your WordPress dashboard, go to Plugins => Add New. Search for "WooCommerce ShippingCalc" and click Install Now.
+
 *Manual*: Upload the folder 'auctioninc-shippingcalc-for-woocommerce' to the '/wp-content/plugins/' directory
 
+
 **2. Subscribe to AuctionInc**
+
 Go to [AuctionInc](https://www.auctioninc.com/info/page/woocommerce_api_module) and register for our "Woocommerce Cart ShippingCalc Plugin". Two Week Free Trial after you register!
 
+
 **3. Complete AuctionInc Setup Wizard**
+
 Complete the brief [AuctionInc Setup Wizard](https://www.auctioninc.com/center/setup_wizard) after you register.
 
+
 **4. Activate ShippingCalc Plugin**
+
 In your WordPress dashboard, go to WooCommerce => Settings => Shipping => AuctionInc and enable the Shipping Method
 
+
 **5. Enter your Plugin Configuration Settings**
+
 Enter the required fields. You will find your AuctionInc Account ID on 
 your [AuctionInc Product Subscription page](https://www.auctioninc.com/account/subscription_info#woo).
 
