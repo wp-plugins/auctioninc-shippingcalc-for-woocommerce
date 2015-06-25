@@ -19,7 +19,7 @@ jQuery(document).ready(function($) {
     function toggle_method_fields() {
         var calc_method = $('#auctioninc_calc_method').val();
 
-        if (calc_method === 'C') {
+        if (calc_method === 'C' || calc_method === 'CI') {
             $('.auctioninc_fixed_mode_field').fadeOut();
             $('.auctioninc_fixed_code_field').fadeOut();
             $('.auctioninc_fixed_fee_1_field').fadeOut();

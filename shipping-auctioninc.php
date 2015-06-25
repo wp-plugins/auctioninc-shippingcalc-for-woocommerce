@@ -2,8 +2,8 @@
 /*
   Plugin Name: AuctionInc ShippingCalc for WooCommerce
   Plugin URI: http://www.auctioninc.com/info/page/woocommerce_api_module
-  Description: Obtain shipping rates dynamically via the AuctionInc Shipping API for your orders.
-  Version: 1.5
+  Description: Accurate multi-carrier real-time shipping rates from FedEx, USPS, UPS, and DHL. Multiple ship origins, many advanced features. Free two week trial. No carrier accounts required.
+  Version: 1.6
   Author: Paid, Inc.
   Author URI: http://www.auctioninc.com
 
@@ -138,10 +138,10 @@ if (is_woocommerce_active()) {
         $fixed_code = !empty($fixed_code) ? $fixed_code : $auctioninc_settings['fixed_code'];
 
         $fixed_fee_1 = get_post_meta($post->ID, 'auctioninc_fixed_fee_1', true);
-        $fixed_fee_1 = !empty($fixed_fee_1) ? $fixed_fee_1 : $auctioninc_settings['fixed_fee_1'];
+        $fixed_fee_1 = is_numeric($fixed_fee_1) ? $fixed_fee_1 : $auctioninc_settings['fixed_fee_1'];
 
-        $fixed_fee_2 = get_post_meta($post->ID, 'auctioninc_fixed_fee_1', true);
-        $fixed_fee_2 = !empty($fixed_fee_2) ? $fixed_fee_2 : $auctioninc_settings['fixed_fee_2'];
+        $fixed_fee_2 = get_post_meta($post->ID, 'auctioninc_fixed_fee_2', true);
+        $fixed_fee_2 = is_numeric($fixed_fee_2) ? $fixed_fee_2 : $auctioninc_settings['fixed_fee_2'];
 
         // Calculation Method
         woocommerce_wp_select(
@@ -152,7 +152,8 @@ if (is_woocommerce_active()) {
                         '' => __('-- Select -- ', 'wc_auctioninc'),
                         'C' => __('Carrier Rates', 'wc_auctioninc'),
                         'F' => __('Fixed Fee', 'wc_auctioninc'),
-                        'N' => __('Free', 'wc_auctioninc')
+                        'N' => __('Free', 'wc_auctioninc'),
+                        'CI' => __('Free Domestic', 'wc_auctioninc')
                     ),
                     'value' => $calc_method,
                     'desc_tip' => 'true',
@@ -195,7 +196,7 @@ if (is_woocommerce_active()) {
                     'type' => 'number',
                     'custom_attributes' => array(
                         'step' => '0.01',
-                        'min' => '0'
+                        'min' => '0.01'
                     ),
                     'value' => $fixed_fee_1,
                     'desc_tip' => 'true',
@@ -309,6 +310,11 @@ if (is_woocommerce_active()) {
                         'DHL9AM' => __('DHL Express 9 A.M.', 'wc_auctioninc'),
                         'DHL10AM' => __('DHL Express 10:30 A.M.', 'wc_auctioninc'),
                         'DHL12PM' => __('DHL Express 12 P.M.', 'wc_auctioninc'),
+                        'DHLES' => __('DHL Domestic Economy Select', 'wc_auctioninc'),
+                        'DHLEXA' => __('DHL Domestic Express 9 A.M.', 'wc_auctioninc'),
+                        'DHLEXM' => __('DHL Domestic Express 10:30 A.M.', 'wc_auctioninc'),
+                        'DHLEXP' => __('DHL Domestic Express 12 P.M.', 'wc_auctioninc'),
+                        'DHLDE' => __('DHL Domestic Express 6 P.M.', 'wc_auctioninc'),
                         'FDX2D' => __('FedEx 2 Day', 'wc_auctioninc'),
                         'FDX2DAM' => __('FedEx 2 Day AM', 'wc_auctioninc'),
                         'FDXES' => __('FedEx Express Saver', 'wc_auctioninc'),
@@ -617,7 +623,7 @@ if (is_woocommerce_active()) {
 
         if (empty($auctioninc_settings['account_id'])) {
             echo '<div class="error">
-             <p>' . __('An') . ' <a href="http://www.auctioninc.com/info/page/woocommerce_api_module" target="_blank">' . __('AuctionInc', 'wc_auctioninc') . '</a> ' . __('account is required to use this plugin.', 'wc_auctioninc') . '</p>
+             <p>' . __('An') . ' <a href="http://www.auctioninc.com/info/page/woocommerce_api_module" target="_blank">' . __('AuctionInc', 'wc_auctioninc') . '</a> ' . __('account is required to use the ShippingCalc plugin.  Please enter your AuctionInc Account ID.', 'wc_auctioninc') . '</p>
          </div>';
         }
     }
