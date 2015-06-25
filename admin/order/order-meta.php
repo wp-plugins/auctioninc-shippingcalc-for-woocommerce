@@ -35,12 +35,13 @@ function wc_auctioninc_add_order_callback($post) {
             echo __('Width', 'wc_auctioninc') . ": {$package['Width']}<br>";
             echo __('Height', 'wc_auctioninc') . ": {$package['Height']}<br>";
             echo __('Oversize Code', 'wc_auctioninc') . ": {$package['OversizeCode']}<br>";
-            echo __('Carrier Rate', 'wc_auctioninc') . ": {$package['CarrierRate']}<br>";
-            echo __('Surcharge', 'wc_auctioninc') . ": {$package['Surcharge']}<br>";
-            echo __('Fuel Surcharge', 'wc_auctioninc') . ": {$package['FuelSurcharge']}<br>";
-            echo __('Insurance', 'wc_auctioninc') . ": {$package['Insurance']}<br>";
-            echo __('Handling', 'wc_auctioninc') . ": {$package['Handling']}<br>";
-            echo __('Total Rate', 'wc_auctioninc') . ": {$package['ShipRate']}<br>";
+            echo __('Carrier Rate', 'wc_auctioninc') . ": ".number_format($package['CarrierRate'],2)."<br>";
+            echo __('Fixed Rate', 'wc_auctioninc') . ": ".number_format($package['FixedRate'],2)."<br>";
+            echo __('Surcharge', 'wc_auctioninc') . ": ".number_format($package['Surcharge'],2)."<br>";
+            echo __('Fuel Surcharge', 'wc_auctioninc') . ": ".number_format($package['FuelSurcharge'],2)."<br>";
+            echo __('Insurance', 'wc_auctioninc') . ": ".number_format($package['Insurance'],2)."<br>";
+            echo __('Handling', 'wc_auctioninc') . ": ".number_format($package['Handling'],2)."<br>";
+            echo __('Total Rate', 'wc_auctioninc') . ": ".number_format($package['ShipRate'],2)."<br>";
 
             $j = 1;
             echo '<br>';

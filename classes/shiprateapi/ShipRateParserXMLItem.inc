@@ -3,7 +3,7 @@
  *
  * Copyright (c) Paid, Inc.  All rights reserved.
  *
- * $Id: ShipRateParserXMLItem.inc,v 1.8 2012/11/16 17:16:03 dsherman Exp $
+ * $Id: ShipRateParserXMLItem.inc,v 1.11 2015/03/25 15:34:19 dsherman Exp $
  *
  * This program is part of the Paid Shipping Rate API toolkit for PHP and is responsible for parsing certain XML
  * elements that are returned by the rate engine.
@@ -131,6 +131,7 @@ class ShipRateParserXMLItem extends ShipRateParserXML
             'calcmethod'  => 'CalcMethod',
             'rate'        => 'Rate',
             'carrierrate'      => 'CarrierRate',
+            'fixedrate'        => 'FixedRate',
             'surcharges'       => 'Surcharges',
             'fuelsurcharges'   => 'FuelSurcharges',
             'handlingfees'     => 'HandlingFees',
@@ -170,6 +171,7 @@ class ShipRateParserXMLItem extends ShipRateParserXML
             'splitcode'   => 'SplitCode',
             'flatratecode'  => 'FlatRateCode',
             'carrierrate' => 'CarrierRate',
+            'fixedrate'   => 'FixedRate',
             'surcharge'   => 'Surcharge',
             'fuelsurcharge' => 'FuelSurcharge',
             'insurance'   => 'Insurance',

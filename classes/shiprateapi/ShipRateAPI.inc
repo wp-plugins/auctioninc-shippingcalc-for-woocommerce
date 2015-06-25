@@ -3,7 +3,7 @@
  *
  * Copyright (c) Paid, Inc.  All rights reserved.
  *
- * $Id: ShipRateAPI.inc,v 1.21 2014/11/05 23:10:27 dsherman Exp $
+ * $Id: ShipRateAPI.inc,v 1.22 2015/03/08 17:29:29 dsherman Exp $
  *
  * This program is part of the Paid ShipRateAPI Toolkit and is the interface class for PHP client applications 
  * that want to make calls to the rate engine.  
@@ -232,17 +232,19 @@ class ShipRateAPI
     * @param Float  - Width
     * @param Float  - Height
     * @param String - Dimensional Units: IN | CM
-    * @param Float  - Weigth
-    * @param String - Weight Untis: LBS | KGS
+    * @param Float  - Weight
+    * @param String - Weight Units: LBS | KGS
     * @param Float  - Declared Value
     * @param String - Packing Method: T | S
+    * @param String - Lot Size 
+    * @param String - Calc Method: C | CI   
     * @access public
     */
-   function addItemCalc($refCode, $qty, $weight, $wtUOM, $length, $width ,$height ,$dimUOM, $decVal, $packMethod, $lotSize=1)
+   function addItemCalc($refCode, $qty, $weight, $wtUOM, $length, $width ,$height ,$dimUOM, $decVal, $packMethod, $lotSize=1, $calcMethod="C" )
    {
       $cnt = (int) count($this->rateReq['ItemList']);
       $this->rateReq['ItemList'][$cnt] = array();
-      $this->rateReq['ItemList'][$cnt]['CalcMethod']    = 'C';
+      $this->rateReq['ItemList'][$cnt]['CalcMethod']    = $calcMethod;
       $this->rateReq['ItemList'][$cnt]['RefCode']       = $refCode;
       $this->rateReq['ItemList'][$cnt]['Quantity']      = (float) abs($qty);
       $this->rateReq['ItemList'][$cnt]['LotSize']       = (float) abs($lotSize);
@@ -371,20 +373,22 @@ class ShipRateAPI
     * Add Carrier
     * @param String - Carrier Code: UPS | USPS | DHL | FDX
     * @param String - Entry Point
-    * @param String - Access Account Key (DHL)
-    * @param String - Access Account Postal Code (DHL): deprecated 6-13
+    * @param String - Access Account Key (DHL)  
+    * @param String - Access Account Postal Code (DHL): deprecated 6-13   
+    * @param String - Account Country Code Key (DHL): added 5-16
     * @access public
     */
-   function addCarrier($carrierCode, $entryPoint, $accessKey=false, $postalCode=false)
+   function addCarrier($carrierCode, $entryPoint, $accessKey=false, $postalCode=false, $acctCountryCode=false)
    {
       $code = strtoupper($carrierCode);
       if (!preg_match("/^(UPS|USPS|DHL|FEDEX)\$/",$code)) return false;
 
       $this->rateReq['CarrierList'][$code] = array();
       $this->rateReq['CarrierList'][$code]['EntryPoint'] = $entryPoint;
-      if ($code === 'DHL' && $accessKey) {
-         $this->rateReq['CarrierList'][$code]['AccessKey']  = $accessKey;
-         // $this->rateReq['CarrierList'][$code]['PostalCode'] = strtoupper($postalCode);
+      if ($code === 'DHL'){
+         if ($accessKey)       $this->rateReq['CarrierList'][$code]['AccessKey']  = $accessKey;
+         if ($acctCountryCode) $this->rateReq['CarrierList'][$code]['AcctCountryCode']  = $acctCountryCode;
+         // if ($postalCode)   $this->rateReq['CarrierList'][$code]['PostalCode'] = strtoupper($postalCode);
       }
    }
 
@@ -546,7 +550,8 @@ class ShipRateAPI
                   '<RefCode>'.$this->rateReq['ItemList'][$i]['RefCode'].'</RefCode>'.
                   '<Quantity>'.$this->rateReq['ItemList'][$i]['Quantity'].'</Quantity>'.
                   '<CalcMethod code="'.$this->rateReq['ItemList'][$i]['CalcMethod'].'">';
-             if ($this->rateReq['ItemList'][$i]['CalcMethod'] === 'C') {
+             if ($this->rateReq['ItemList'][$i]['CalcMethod'] === 'C' ||
+               $this->rateReq['ItemList'][$i]['CalcMethod'] === 'CI') {
                 $xml .= '<CarrierCalcProps>'.
                     '<Weight>'.$this->rateReq['ItemList'][$i]['Weight'].'</Weight>'.
                     '<WeightUOM>'.$this->rateReq['ItemList'][$i]['WeightUOM'].'</WeightUOM>'.
@@ -612,8 +617,8 @@ class ShipRateAPI
             $xml .= '<Carrier code="'.$key.'">'.
                     '<EntryPoint>'.$val['EntryPoint'].'</EntryPoint>';
             if ($key === 'DHL') {
-               $xml .= '<AccessKey>'.$val['AccessKey'].'</AccessKey>'.
-                       '<PostalCode>'.$val['PostalCode'].'</PostalCode>';
+               if (isset($val['AccessKey'])) $xml .= '<AccessKey>'.$val['AccessKey'].'</AccessKey>';
+               if (isset($val['AcctCountryCode'])) $xml .= '<AcctCountryCode>'.$val['AcctCountryCode'].'</AcctCountryCode>';
             }
             if (array_key_exists($key, $this->flatRateFlag)) {
                 $xml .= '<FlatRatePackaging>'.$this->flatRateFlag[$key].'</FlatRatePackaging>';

@@ -12,7 +12,7 @@ jQuery(document).ready(function($) {
 
     function toggle_method_fields() {
         var calc_method = $('#woocommerce_auctioninc_calc_method').val();
-        if (calc_method === 'C') {
+        if (calc_method === 'C' || calc_method === 'CI') {
             $('#woocommerce_auctioninc_package').closest('tr').fadeIn();
             $('#woocommerce_auctioninc_insurance').closest('tr').fadeIn();
             $('#woocommerce_auctioninc_fixed_mode').closest('tr').fadeOut();
