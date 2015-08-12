@@ -3,7 +3,7 @@
 Contributors: AuctionInc,45press
 Tags: shipping,shipping rates,shipping calculator,shipping estimate,estimator,carriers,USPS,FEDEX,UPS,DHL,woocommerce,woocommerce shipping,wc shipping,advanced shipping, multiple origins
 Requires at least: 3.0
-Tested up to: 4.2.2
+Tested up to: 4.3
 Stable tag: 1.6
 License: GNU General Public License v3.0
 
@@ -16,7 +16,7 @@ Accurate multi-carrier real-time shipping rates from FedEx, USPS, UPS, and DHL. 
 
 Registration at [AuctionInc](https://www.auctioninc.com/info/page/woocommerce_api_module) required to begin your free trial.  
 
-Our ShippingCalc Plugin for WooCommerce provides you access to our Shipping Rates API and allows you to integrate rates from multiple carriers (DHL, FedEx, USPS, UPS) into your store. There are many advanced features in our WooCommerce Shipping Plugin such as drop-shipping from multiple origins, USPS flat rate box calculations, insurance,flexiible handling, packaging material weight, and more. Our technology is especially unique in its capability to accurately generate rates for products or quantities that must be packed into multiple boxes. 
+Our ShippingCalc Plugin for WooCommerce provides you access to our Shipping Rates API and allows you to integrate rates from multiple carriers (DHL, FedEx, USPS, UPS) into your store. There are many advanced features in our WooCommerce Shipping Plugin such as drop-shipping from multiple origins, USPS flat rate box calculations, insurance,flexible handling, packaging material weight, and more. Our technology is especially unique in its capability to accurately generate rates for products or quantities that must be packed into multiple boxes. 
 
 **Features Include:**
 
